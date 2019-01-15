@@ -12,7 +12,6 @@ class Routes extends Component{
 			<Layout>
 			<Switch>
 			<Route path="/" exact component={Home}/>
-
 			</Switch>
 			</Layout>
 
