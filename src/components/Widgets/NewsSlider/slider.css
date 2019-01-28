@@ -1,0 +1,19 @@
+.featured_items{
+	position: relative;
+}
+
+
+.featured_items a{
+	position:absolute;
+	bottom:0px;
+	width: 100%;
+	text-decoration: none;
+	right: 0px;
+}
+
+
+.featured_image{
+	height:330px;
+	background-size:cover !important;
+	background-repeat: no-repeat !important;
+}
