@@ -11,7 +11,7 @@ const footer = () =>{
 				<img alt="nba logo" src="/images/nba_logo.png"/>
 			</Link>
 			<div className={styles.text}>
-				@NBA {CURRENT_YEAR} All rights reserved.
+				@IIITV CRIC LEAGUE  {CURRENT_YEAR} All rights reserved.
 			</div>
 		</div>
 

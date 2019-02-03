@@ -17,3 +17,14 @@
 	background-size:cover !important;
 	background-repeat: no-repeat !important;
 }
+
+
+.featured_title{
+	color:#ffffff;
+	top:0px;
+	font-weight:300;
+	font-size:27px;
+	width:100%;
+	box-sizing: border-box;
+	padding:20px;
+}
