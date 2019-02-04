@@ -5,7 +5,7 @@ import axios from 'axios';
 import styles from './newsList.css';
 
 import {URL} from '../../../config.js';
-
+import Button from '../Buttons/button.js';
 
 
 
@@ -45,6 +45,16 @@ class NewsList extends Component{
 				switch(type){
 					case('card'):
 						template = this.state.items.map((item,i)=>(
+
+							<CSSTransition
+								classNames = {{
+									enter : styles.newsListWrapper,
+									enterActive : styles.newsListWrapper_Active
+								}}
+								timeout = {500}
+								key = {i}
+
+							>
 							<div>
 							<div className ={styles.newsItems}>
 							<Link to ={`articles/${item.id}`}>
@@ -52,6 +62,7 @@ class NewsList extends Component{
 							</Link>
 							</div>
 							</div>
+							</CSSTransition>
 
 							))
 						break;
@@ -71,11 +82,19 @@ class NewsList extends Component{
 		return (
 
 			<div style={{marginTop:"22px"}}>
+			<TransitionGroup
+			component = "div"
+			className = "List"
+			>
 			{this.renderNews(this.props.type)}
-
-			<div onClick={()=>this.loadMore()}>
-			Load More
-			</div>
+			</TransitionGroup>
+			<Button
+				type = "loadmore"
+				loadMore ={()=>{this.loadMore()}}
+				cta = "Load More News"
+			/>
+	
+		
 			</div>
 
 

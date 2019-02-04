@@ -21,3 +21,17 @@
 .newsItems a{
 	text-decoration:none;
 }
+
+
+
+.newsListWrapper{
+	box-sizing: border-box;
+	opacity : 0;
+	transform: translateX(-100%);
+	transition: all .5s ease-in;
+}
+
+.newsListWrapper_Active{
+	opacity: 1;
+	transform:translateX(0%);
+}
